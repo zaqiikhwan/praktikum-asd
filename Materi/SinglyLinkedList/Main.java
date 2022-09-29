@@ -2,7 +2,7 @@ package Materi.SinglyLinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        SingleLinkedList sll = new SingleLinkedList();
+        SinglyLinkedList sll = new SinglyLinkedList();
         sll.addFirst(10);
         sll.addFirst(9);
         sll.addLast(11);
@@ -29,7 +29,7 @@ class Node {
 
 }
 
-class SingleLinkedList {
+class SinglyLinkedList {
     Node head;
     Node tail;
     int size = 0;
