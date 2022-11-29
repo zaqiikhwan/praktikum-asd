@@ -16,6 +16,8 @@ public class Tree {
         binaryTree.inorder();
         System.out.println("\nPostorder");
         binaryTree.postorder();
+        System.out.println("\nLevelorder");
+        binaryTree.levelOrder();
 
     }
 }
@@ -58,27 +60,27 @@ class BinaryTree {
         }
         return node;
     }
-    private void printPreorder(Node tmp){
-        if (tmp != null) {
-            System.out.print(tmp.value + ", ");
-            printPreorder(tmp.left);
-            printPreorder(tmp.right);
+    private void printPreorder(Node root){
+        if (root != null) {
+            System.out.print(root.value + ", ");
+            printPreorder(root.left);
+            printPreorder(root.right);
         }
     }
 
-    private void printInorder(Node tmp){
-        if (tmp != null) {
-            printInorder(tmp.left);
-            System.out.print(tmp.value + ", ");
-            printInorder(tmp.right);
+    private void printInorder(Node root){
+        if (root != null) {
+            printInorder(root.left);
+            System.out.print(root.value + ", ");
+            printInorder(root.right);
         }
     }
 
-    private void printPostorder(Node tmp){
-        if (tmp != null) {
-            printPostorder(tmp.left);
-            printPostorder(tmp.right);
-            System.out.print(tmp.value + ", ");
+    private void printPostorder(Node root){
+        if (root != null) {
+            printPostorder(root.left);
+            printPostorder(root.right);
+            System.out.print(root.value + ", ");
         }
     }
 
@@ -90,6 +92,42 @@ class BinaryTree {
     }
     void preorder(){
         printPreorder(root);
+    }
+
+    public static boolean printLevel(Node root, int level)
+    {
+        // base case
+        if (root == null) {
+            return false;
+        }
+
+        if (level == 1) {
+            System.out.print(root.value + ", ");
+
+            // return true apabila ada 1 node yang berada pada level tersebut
+            return true;
+        }
+
+        boolean left = printLevel(root.left, level - 1);
+        boolean right = printLevel(root.right, level - 1);
+
+        return left || right;
+    }
+
+    // fungsi untuk print level order traversal dari binary tree
+    public void levelOrderTraversal(Node root)
+    {
+        // dimulai dari level 1 hingga level tertinggi tree
+        int level = 1;
+
+        // berjalan sampain method printlevel() mengembalikan nilai false
+        while (printLevel(root, level)) {
+            level++;
+        }
+    }
+
+    public void levelOrder() {
+        levelOrderTraversal(root);
     }
 
 }
