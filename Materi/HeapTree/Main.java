@@ -50,27 +50,15 @@ class HeapTree {
     }
 
     private void printPreorder(Node root){
-        if (root != null) {
-            System.out.print(root.value + ", ");
-            printPreorder(root.left);
-            printPreorder(root.right);
-        }
+        // isi bagian sini
     }
 
     private void printInorder(Node root){
-        if (root != null) {
-            printInorder(root.left);
-            System.out.print(root.value + ", ");
-            printInorder(root.right);
-        }
+        // isi bagian sini
     }
 
     private void printPostorder(Node root){
-        if (root != null) {
-            printPostorder(root.left);
-            printPostorder(root.right);
-            System.out.print(root.value + ", ");
-        }
+        // isi bagian sini
     }
 
     public boolean printLevel(Node root, int level) {
@@ -79,7 +67,7 @@ class HeapTree {
         }
 
         if (level == 1) {
-            System.out.print(root.value + ", ");
+            // isi bagian sini
             return true;
         }
 
