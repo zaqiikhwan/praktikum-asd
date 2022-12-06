@@ -1,6 +1,7 @@
 package Materi.SinglyLinkedList;
 
 public class Main {
+    // linkedlist scratch
     public static void main(String[] args) {
         SinglyLinkedList sll = new SinglyLinkedList();
         sll.addFirst(10);
