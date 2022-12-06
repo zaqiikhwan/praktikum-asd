@@ -12,7 +12,7 @@ public class Main {
         for (int i = 0; i < loop; i++) {
             heapTree.insertNode(sc.nextInt());
         }
-        // isi bagian sini
+        // isi bagian sini (goodluck!)
     }
 }
 
