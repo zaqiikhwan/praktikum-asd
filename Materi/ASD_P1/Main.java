@@ -1,8 +1,9 @@
-package ASD_P1;
+package Materi.ASD_P1;
 //import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
+        // linkedlist using library from java
 //        LinkedList<Object> l1 = new LinkedList<>();
 //        l1.add(1);
 //        l1.add("aaa");
